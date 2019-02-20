@@ -4,7 +4,7 @@
 // Austin Kemp
 // 20 February 2019
 // Description: Header file containing the function declarations and 
-// class constructor declaration
+// class constructor declaration 
 //=============================================================================
 #pragma once
 

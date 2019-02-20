@@ -85,7 +85,7 @@ double Mortgage::getTerm() const
 // Parameters: none
 // return: payment, double holding the calculated monthly payment
 double Mortgage::getMonthlyPayment() const
-{
+{ 
 	double payment;
 	payment = (loanAmount * (interestRate / 12.0) * getTerm()) / (getTerm() - 1);
 	payment = round(payment * 100.0) / 100.0;
