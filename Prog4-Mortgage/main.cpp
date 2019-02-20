@@ -36,7 +36,7 @@ int main()
 	mortgageObject.setLoanAmount(loan);
 	cout << endl;
 
-	cout << "How much is the annual interest rate? (in decimal format) ";
+	cout << "How much is the annual interest rate? (in %) ";
 	getline(cin, stringInput);
 	checkInput(stringInput, rate);
 	mortgageObject.setInterestRate(rate);

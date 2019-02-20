@@ -44,13 +44,13 @@ void Mortgage::setLoanAmount(double loan)
 }
 
 // Function: setInterestRate, sets the interest rate to the value
-// given by the user
+// given by the user divided by 100 given a percentage
 // Parameters:
 // rate: double holding amount to change the rate to
 // return: none
 void Mortgage::setInterestRate(double rate)
 {
-	interestRate = rate;
+	interestRate = rate / 100.0; // divides the input by 100 given a percentage
 }
 
 // Function: setNumYears, sets the number of years of the loan
@@ -87,7 +87,8 @@ double Mortgage::getTerm() const
 double Mortgage::getMonthlyPayment() const
 { 
 	double payment;
-	payment = (loanAmount * (interestRate / 12.0) * getTerm()) / (getTerm() - 1);
+	payment = (loanAmount * (interestRate / 12.0) * getTerm()) / 
+		(getTerm() - 1);
 	payment = round(payment * 100.0) / 100.0;
 	return payment;
 }
